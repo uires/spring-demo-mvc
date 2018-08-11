@@ -16,6 +16,12 @@
 		<input type="text" name="nome"/>
 		<button type="submit">Enviar</button>
 	</form>
+	
+	<form action="processFormTree" method="GET">
+		<input type="text" name="nome"/>
+		<input type="text" name="idade"/>
+		<button type="submit">Enviar</button>
+	</form>
 
 </body>
 </html>
