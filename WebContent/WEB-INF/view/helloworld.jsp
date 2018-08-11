@@ -7,6 +7,9 @@
 <title>Hello World</title>
 </head>
 <body>
-	Hello World - ${param.nome}
+	Hello World - ${param.nome}<br />
+	<hr />
+	message : ${message}
+	
 </body>
 </html>

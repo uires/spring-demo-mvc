@@ -1,8 +1,10 @@
 package br.com.mvcdemo.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class HelloWorldController {
@@ -14,8 +16,21 @@ public class HelloWorldController {
 	}
 
 	// preciso de um método processar a requisição (action)
-	@RequestMapping(value = "/processForm", method = RequestMethod.GET)
+	@RequestMapping("/processForm")
 	public String processForm() {
 		return "helloworld";
 	}
+
+	// novo método no controlador para ler dados de uma entidade
+	@RequestMapping("/processFormTwo")
+	public String servletGetWay(HttpServletRequest request, Model model) {
+		// read the parameter from the html form
+		String parameter = request.getParameter("nome");
+		// parse parameter to uppercase
+		parameter = parameter.toUpperCase();
+		// pass parameter to model object
+		model.addAttribute("message", "Hellou dude : " + parameter);
+		return "helloworld";
+	}
+
 }
