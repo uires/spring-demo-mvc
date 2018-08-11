@@ -5,6 +5,9 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import br.com.mvcdemo.entity.Estudante;
 
 @Controller
 public class HelloWorldController {
@@ -30,6 +33,14 @@ public class HelloWorldController {
 		parameter = parameter.toUpperCase();
 		// pass parameter to model object
 		model.addAttribute("message", "Hellou dude : " + parameter);
+		return "helloworld";
+	}
+
+	// bind parameter with annotation @requestParam
+	@RequestMapping("/processFormTree")
+	public String popularObjetoEstudante(@RequestParam("nome") String nome, @RequestParam("idade") int idade,
+			Model modelo) {
+		modelo.addAttribute("estudanteData", new Estudante(nome, idade));
 		return "helloworld";
 	}
 
