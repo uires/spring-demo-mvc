@@ -10,6 +10,8 @@
 	Hello World - ${param.nome}<br />
 	<hr />
 	message : ${message}
-	
+	<hr />
+	your name : ${estudanteData.nome}
+	your age : ${estudanteData.idade}
 </body>
 </html>
