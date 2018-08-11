@@ -11,6 +11,11 @@
 		<input type="text" name="nome"/>
 		<button type="submit">Enviar</button>
 	</form>
+	<hr />
+	<form action="processFormTwo" method="GET">
+		<input type="text" name="nome"/>
+		<button type="submit">Enviar</button>
+	</form>
 
 </body>
 </html>
