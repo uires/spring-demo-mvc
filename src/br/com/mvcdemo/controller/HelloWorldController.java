@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import br.com.mvcdemo.entity.Estudante;
 
-@Controller
+@Controller(value = "/hello")
 public class HelloWorldController {
 
 	// preciso de um método no controlador para devolver o form incial
@@ -24,15 +24,13 @@ public class HelloWorldController {
 		return "helloworld";
 	}
 
-	// novo método no controlador para ler dados de uma entidade
+	// novo método no controlador para ler dados de uma entidade com servlet request
 	@RequestMapping("/processFormTwo")
 	public String servletGetWay(HttpServletRequest request, Model model) {
 		// read the parameter from the html form
 		String parameter = request.getParameter("nome");
-		// parse parameter to uppercase
-		parameter = parameter.toUpperCase();
 		// pass parameter to model object
-		model.addAttribute("message", "Hellou dude : " + parameter);
+		model.addAttribute("message", "Hellou dude : " + parameter.toUpperCase());
 		return "helloworld";
 	}
 
