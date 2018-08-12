@@ -21,11 +21,13 @@
 		</div>
 		<div>
 			<label>País</label>
-			<form:select path="country" itemLabel="Brasil" value="BRA">
+			<form:select path="country">
+				<form:option value="BRA" label="Brasil"/>
 				<form:option value="ALE" label="Alemanha"/>
 				<form:option value="FRA" label="França"/>
 				<form:option value="ANG" label="Angola"/>
 			</form:select>
+			
 		</div>
 		<button type="submit" >Cadastrar</button>
 	</form:form>
