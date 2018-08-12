@@ -14,25 +14,31 @@
 		<div>
 			<label>Nome</label>
 			<form:input path="nome" />
-		</div>
+		</div><br />
 		<div>
-			<label>Sexo</label>
+			<label>Sexo: </label>
 			Feminino<form:radiobutton path="sexo" value="F" />
 			Masculino<form:radiobutton path="sexo" value="M" />
-		</div>
+		</div><br />
 		<div>
 			<label>Idade</label>
 			<form:input path="idade" />
-		</div>
+		</div><br />
+		<div>
+			<label>Matérias</label>
+			Geografia<form:checkbox path="materia" value="Geografia" /><br />
+			Inglês<form:checkbox path="materia" value="Inglês" /><br />
+			História<form:checkbox path="materia" value="História" /><br />
+			Matemática<form:checkbox path="materia" value="Matemática" /><br />
+		</div><br />
 		<div>
 			<label>País</label>
 			<form:select path="country">
-				<form:option value="BRA" label="Brasil"/>
-				<form:option value="ALE" label="Alemanha"/>
-				<form:option value="FRA" label="França"/>
-				<form:option value="ANG" label="Angola"/>
+				<c:forEach varStatus="index" items="${estudante.listaPaises}" var="iten">
+					<form:option value="${iten}"/>
+				</c:forEach>
 			</form:select>
-		</div>
+		</div><br />
 		<button type="submit" >Cadastrar</button>
 	</form:form>
 	
