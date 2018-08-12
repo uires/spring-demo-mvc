@@ -16,6 +16,11 @@
 			<form:input path="nome" />
 		</div>
 		<div>
+			<label>Sexo</label>
+			Feminino<form:radiobutton path="sexo" value="F" />
+			Masculino<form:radiobutton path="sexo" value="M" />
+		</div>
+		<div>
 			<label>Idade</label>
 			<form:input path="idade" />
 		</div>
@@ -27,7 +32,6 @@
 				<form:option value="FRA" label="França"/>
 				<form:option value="ANG" label="Angola"/>
 			</form:select>
-			
 		</div>
 		<button type="submit" >Cadastrar</button>
 	</form:form>

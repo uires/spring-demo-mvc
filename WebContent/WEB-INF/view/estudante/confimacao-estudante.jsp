@@ -11,5 +11,6 @@
 	nome : ${estudante.nome}<br />
 	idade : ${estudante.idade}<br />
 	país : ${estudante.country}<br />
+	sexo : ${estudante.sexo}<br />
 </body>
 </html>
