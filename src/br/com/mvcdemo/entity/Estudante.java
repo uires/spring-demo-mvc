@@ -3,13 +3,15 @@ package br.com.mvcdemo.entity;
 public class Estudante {
 	private String nome;
 	private int idade;
+	private String country;
 
 	public Estudante() {
 	}
 
-	public Estudante(String nome, int idade) {
+	public Estudante(String nome, int idade, String country) {
 		this.setNome(nome);
 		this.setIdade(idade);
+		this.setCountry(country);
 	}
 
 	public String getNome() {
@@ -26,6 +28,14 @@ public class Estudante {
 
 	public void setIdade(int idade) {
 		this.idade = idade;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
 	}
 
 }
