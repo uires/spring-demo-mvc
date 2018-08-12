@@ -9,7 +9,7 @@
 <title>Formulário Estudante</title>
 </head>
 <body>
-
+	<h3>Cadastrato de Estudante</h3>
 	<form:form action="processForm" modelAttribute="estudante">
 		<div>
 			<label>Nome</label>
@@ -18,6 +18,14 @@
 		<div>
 			<label>Idade</label>
 			<form:input path="idade" />
+		</div>
+		<div>
+			<label>País</label>
+			<form:select path="country" itemLabel="Brasil" value="BRA">
+				<form:option value="ALE" label="Alemanha"/>
+				<form:option value="FRA" label="França"/>
+				<form:option value="ANG" label="Angola"/>
+			</form:select>
 		</div>
 		<button type="submit" >Cadastrar</button>
 	</form:form>
