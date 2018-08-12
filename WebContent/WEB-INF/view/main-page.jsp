@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>Bem vindo!</h1><br />
-	<a href='<c:url value="/hello/showform" />'>Formulário</a>
-
+	<a href='<c:url value="/hello/showform" />'>Formulário</a><br />
+	<a href='<c:url value="/estudante/showForm" />'>Cadastro de Estudante</a>
 </body>
 </html>
