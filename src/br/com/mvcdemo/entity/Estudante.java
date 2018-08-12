@@ -4,6 +4,7 @@ public class Estudante {
 	private String nome;
 	private int idade;
 	private String country;
+	private char sexo;
 
 	public Estudante() {
 	}
@@ -38,4 +39,11 @@ public class Estudante {
 		this.country = country;
 	}
 
+	public char getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(char sexo) {
+		this.sexo = sexo;
+	}
 }
