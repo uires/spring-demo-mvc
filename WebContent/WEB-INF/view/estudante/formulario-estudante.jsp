@@ -9,13 +9,18 @@
 <title>Formulário Estudante</title>
 </head>
 <body>
-	<form:form modelAttribute="estudante" method="POST">
+
+	<form:form action="processForm" modelAttribute="estudante">
 		<div>
 			<label>Nome</label>
 			<form:input path="nome" />
 		</div>
-	
-	
+		<div>
+			<label>Idade</label>
+			<form:input path="idade" />
+		</div>
+		<button type="submit" >Cadastrar</button>
 	</form:form>
+	
 </body>
 </html>
