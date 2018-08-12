@@ -1,12 +1,23 @@
 package br.com.mvcdemo.entity;
 
+import java.util.LinkedHashMap;
+
 public class Estudante {
 	private String nome;
 	private int idade;
 	private String country;
 	private char sexo;
+	private String[] materia;
+	private LinkedHashMap<String, String> listaPaises;
 
 	public Estudante() {
+		this.listaPaises = new LinkedHashMap<>();
+
+		listaPaises.put("BR", "Brasil");
+		listaPaises.put("AL", "Alemanha");
+		listaPaises.put("IN", "India");
+		listaPaises.put("FR", "França");
+		
 	}
 
 	public Estudante(String nome, int idade, String country) {
@@ -46,4 +57,21 @@ public class Estudante {
 	public void setSexo(char sexo) {
 		this.sexo = sexo;
 	}
+
+	public String[] getMateria() {
+		return materia;
+	}
+
+	public void setMateria(String[] materia) {
+		this.materia = materia;
+	}
+
+	public LinkedHashMap<String, String> getListaPaises() {
+		return listaPaises;
+	}
+
+	public void setListaPaises(LinkedHashMap<String, String> listaPaises) {
+		this.listaPaises = listaPaises;
+	}
+
 }
