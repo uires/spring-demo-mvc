@@ -20,6 +20,10 @@
 		Last Name(*):<form:input path="lastName" />
 		<form:errors path="lastName" cssClass="error-input"/><br/><br/>
 		
+		Código Autorização:<form:input path="codigoAutorizacao"/>
+		<form:errors path="codigoAutorizacao" cssClass="error-input"/>
+		
+		
 		<button type="submit">Cadastrar</button>
 	</form:form>
 </body>
