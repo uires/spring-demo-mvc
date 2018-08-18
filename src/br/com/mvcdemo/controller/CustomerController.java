@@ -17,6 +17,11 @@ import br.com.mvcdemo.entity.Customer;
 @RequestMapping("/customer")
 public class CustomerController {
 
+	/*
+	*	@InitiBinder é uma anotação que carrega meta-dados
+	*	para pré-processamento.
+	*	 
+	*/
 	@InitBinder
 	public void initBinder(WebDataBinder theDataBinder) {
 		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
