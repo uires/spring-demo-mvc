@@ -14,8 +14,8 @@ public class Customer {
 	public Customer() {}
 	
 	public Customer(String firstName,
-			@NotNull(message = "Esse campo é obrigatório") @Size(min = 3, max = 30, message = "Esse campo tem que ter no mínimo 3 caracteres e no máximo 30 caracteres") String lastName) {
-		super();
+			@NotNull(message = "Esse campo é obrigatório") @Size(min = 3, max = 30, message = "Esse campo tem que ter no mínimo "
+					+ "3 caracteres e no máximo 30 caracteres") String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
