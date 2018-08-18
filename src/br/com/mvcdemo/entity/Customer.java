@@ -5,7 +5,9 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-public class Customer {
+import lombok.Data;
+
+public @Data class Customer {
 
 	private String firstName;
 	
@@ -14,10 +16,14 @@ public class Customer {
 			+ "3 caracteres e no máximo 30 caracteres")
 	private String lastName;
 	
-	@Min(value = 5, message = "O código deve ser maior que 5 digitos")
-	@Max(value = 25, message = "O código dever ter menos de 25 digitos")
+	/*
+	* 
+	* 
+	*/
+	@Min(value = 5, message = "O código deve ser maior que 5")
+	@Max(value = 3000, message = "Número acima do definido.")
 	private int codigoAutorizacao;
-
+	/*
 	public void setFirstName(String name) {
 		this.firstName = name;
 	}
@@ -41,5 +47,5 @@ public class Customer {
 	public void setCodigoAutorizacao(int codigoAutorizacao) {
 		this.codigoAutorizacao = codigoAutorizacao;
 	}
-
+	*/
 }
