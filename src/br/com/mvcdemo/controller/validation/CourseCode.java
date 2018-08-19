@@ -11,7 +11,7 @@ import javax.validation.Payload;
 @Constraint(validatedBy = CourseCodeValidationClass.class)
 @Target({ ElementType.METHOD, ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
-public @interface CurseCode {
+public @interface CourseCode {
 	
 	public String value() default "LUV";
 	
