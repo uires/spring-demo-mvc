@@ -12,15 +12,13 @@ import javax.validation.Payload;
 @Target({ ElementType.METHOD, ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
 public @interface CourseCode {
-	
+
 	public String value() default "LUV";
-	
+
 	public String message() default "O código deve começar com LUV";
-	
-	public Class<?>[] group() default {};
-	
-	public Class<? extends Payload> [] payload() default {};	
-	
-	
+
+	Class<?>[] groups() default {};
+
+	Class<? extends Payload>[] payload() default {};
 
 }
