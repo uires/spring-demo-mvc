@@ -1,4 +1,4 @@
-package br.com.mvcdemo.controller.validation;
+package br.com.mvcdemo.validation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -15,7 +15,7 @@ public @interface CourseCode {
 	
 	public String value() default "LUV";
 	
-	public String messagE() default "O código deve começar com LUV";
+	public String message() default "O código deve começar com LUV";
 	
 	public Class<?>[] group() default {};
 	
