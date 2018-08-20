@@ -23,6 +23,9 @@
 		Código Autorização:<form:input path="codigoAutorizacao"/>
 		<form:errors path="codigoAutorizacao" cssClass="error-input"/>
 		
+		Código do Curso:<form:input path="courseCode"/>
+		<form:errors path="courseCode" cssClass="error-input"/>
+		
 		
 		<button type="submit">Cadastrar</button>
 	</form:form>
