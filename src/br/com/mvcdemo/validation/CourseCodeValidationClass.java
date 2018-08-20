@@ -1,8 +1,7 @@
-package br.com.mvcdemo.controller.validation;
+package br.com.mvcdemo.validation;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
-import lombok.val;
 
 public class CourseCodeValidationClass implements ConstraintValidator<CourseCode, String> {
 
@@ -15,10 +14,14 @@ public class CourseCodeValidationClass implements ConstraintValidator<CourseCode
 
 	@Override
 	public boolean isValid(String value, ConstraintValidatorContext context) {
-		if (value.startsWith(coursePrefix) == true) {
-			return true;
+		boolean resultado;
+
+		if (value != null) {
+			resultado = value.startsWith(coursePrefix);
+		} else {
+			resultado = true;
 		}
-		return false;
+		return resultado;
 	}
 
 }

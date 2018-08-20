@@ -21,10 +21,10 @@
 		<form:errors path="lastName" cssClass="error-input"/><br/><br/>
 		
 		Código Autorização:<form:input path="codigoAutorizacao"/>
-		<form:errors path="codigoAutorizacao" cssClass="error-input"/>
+		<form:errors path="codigoAutorizacao" cssClass="error-input"/><br /><br />
 		
 		Código do Curso:<form:input path="courseCode"/>
-		<form:errors path="courseCode" cssClass="error-input"/>
+		<form:errors path="courseCode" cssClass="error-input"/><br />
 		
 		
 		<button type="submit">Cadastrar</button>
