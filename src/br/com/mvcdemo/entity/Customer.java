@@ -5,47 +5,39 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import lombok.Data;
+import br.com.mvcdemo.validation.CourseCode;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-public @Data class Customer {
-
+@NoArgsConstructor
+@AllArgsConstructor
+public class Customer {
+	@Getter
+	@Setter
 	private String firstName;
-	
+
 	@NotNull(message = "Esse campo é obrigatório")
-	@Size(min = 3, max = 30, message = "Esse campo tem que ter no mínimo " 
-			+ "3 caracteres e no máximo 30 caracteres")
+	@Size(min = 3, max = 30, message = "Esse campo tem que ter no mínimo " + "3 caracteres e no máximo 30 caracteres")
+	@Setter
+	@Getter
 	private String lastName;
-	
+
 	/*
 	* 
 	* 
 	*/
+	@NotNull(message = "Precisa ser um valor inteiro!")
 	@Min(value = 5, message = "O código deve ser maior que 5")
 	@Max(value = 3000, message = "Número acima do definido.")
-	private int codigoAutorizacao;
-	/*
-	public void setFirstName(String name) {
-		this.firstName = name;
-	}
+	@Setter
+	@Getter
+	private Integer codigoAutorizacao;
+	
+	@Setter
+	@Getter
+	@CourseCode()
+	private String courseCode ;
 
-	public String getFirstName() {
-		return this.firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public int getCodigoAutorizacao() {
-		return codigoAutorizacao;
-	}
-
-	public void setCodigoAutorizacao(int codigoAutorizacao) {
-		this.codigoAutorizacao = codigoAutorizacao;
-	}
-	*/
 }
